@@ -3,8 +3,6 @@ import { getAllBreeds } from '../../api/dogsBreedsService';
 import './Selector.css';
 
 const Selector = ({ handleBreedSelect, handleSubBreedSelect, selectedBreed, selectedSubBreed }) => {
-
-    console.log(selectedBreed, selectedSubBreed);
     const { data, isLoading } = useSWR("breeds", getAllBreeds);
 
     const handleBreedClick = (e) => handleBreedSelect(e.target.value);
